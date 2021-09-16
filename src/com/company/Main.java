@@ -16,6 +16,7 @@ public class Main {
         listA.add(scannerA.nextLine());
         System.out.println(listA);
 
+
         System.out.println("________");
 
         ArrayList<String> listB = new ArrayList<>();
@@ -42,8 +43,8 @@ public class Main {
         listC.add(listB.get(0));
         System.out.println(listC);
 
-        Collections.sort(listC);
-        Collections.reverse(listC);;
+        listC.sort(Comparator.comparing(String::length));
+        Collections.reverse(listC);
         System.out.println(listC);
+        }
     }
-}
